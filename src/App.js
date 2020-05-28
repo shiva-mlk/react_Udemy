@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 
 import Container1 from "./container/Container1";
+import Routes from './routes'
 
 class App extends Component {
   render() {
     return (
       <div>
-        <Container1 />
+        React
+        <Routes />
       </div>
     );
   }
