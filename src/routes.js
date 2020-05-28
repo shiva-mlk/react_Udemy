@@ -15,10 +15,12 @@ class Routes extends Component{
             <Router history={history}>
                 <div>
                 <Header/>
-                <Route path="/"  component={Container1}/>
-                <Route path= "/component1" component={Component1}/>
-                <Route path= "/component2" component={Component2}/>   
-                <Route path= "/component3" component={Component3}/>   
+                <switch>
+                    <Route path="/home"  component={Container1}/>
+                    <Route path= "/component1" component={Component1}/>
+                    <Route path= "/component2" component={Component2}/>   
+                    <Route path= "/component3" component={Component3}/>   
+                </switch>
                 </div>
             </Router>
         </div>

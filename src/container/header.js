@@ -6,13 +6,16 @@ class Header extends Component{
     render(){
         return(
             <div>
-                <Link to ='/component1'>
+                <Link to='home'>
+                    Home
+                </Link>
+                <Link to ='/component1' style={{padding: '5px'}}>
                     Component1
                 </Link>
-                <Link to ='/component2'>
+                <Link to ='/component2' style={{padding: '10px'}}>
                     Component2
                 </Link>
-                <Link to='component3'>
+                <Link to='component3' style={{padding: '7px'}}>
                     Component3
                 </Link>
             </div>
