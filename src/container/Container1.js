@@ -3,12 +3,16 @@ import Component1 from "../Functional/Component1";
 import * as ACTION_TYPEs from "../store/actions/action-types";
 import * as ACTIONS from "../store/actions/actions";
 import { connect } from "react-redux";
+import Auth from '../utils/auth';
+const auth=new Auth()
 class Container1 extends Component {
   render() {
     const user_text = "text 1"
     
+    
     return (
       <div>
+        <button onClick={() => auth.login()}>Login</button>
         <button onClick={() => console.log(this.props.stateprop1)}>
           Get Start
         </button>

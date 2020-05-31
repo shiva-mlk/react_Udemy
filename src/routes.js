@@ -17,9 +17,8 @@ class Routes extends Component{
                 <Header/>
                 <switch>
                     <Route path="/home"  component={Container1}/>
-                    <Route path= "/component1" component={Component1}/>
-                    <Route path= "/component2" component={Component2}/>   
-                    <Route path= "/component3" component={Component3}/>   
+                    <Route path= "/component/:id" render={()=><Component1/>}/>
+  
                 </switch>
                 </div>
             </Router>
