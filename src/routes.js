@@ -1,13 +1,19 @@
 import React, {Component} from 'react';
+import Callback from './Functional/callback';
 import Component1 from './Functional/Component1';
 import Component2 from './Functional/Component2';
 import Component3 from './Functional/Component3';
 import Container1 from './container/Container1';
 import Header from './container/header';
 import history from './utils/history';
-
-import { Router , Route} from 'react-router';
-
+import { Router , Route ,Switch} from 'react-router';
+import Auth from './utils/auth'
+// const auth=new Auth()
+// const handleAuthentication = (props) => {
+//     if (props.location.hash){
+//         auth.handleAuth(props)
+//     }
+// }
 class Routes extends Component{
     render(){
     return(
@@ -15,11 +21,12 @@ class Routes extends Component{
             <Router history={history}>
                 <div>
                 <Header/>
-                <switch>
-                    <Route path="/home"  component={Container1}/>
-                    <Route path= "/component/:id" render={()=><Component1/>}/>
+                <Switch>
+                    <Route exact path='/'  component={Container1} />
+                    <Route path='/callback'  component={Callback}/>
+                    <Route path= "/component/:id" render={(props)=><Component1{...props}/>}/>
   
-                </switch>
+                </Switch>
                 </div>
             </Router>
         </div>
